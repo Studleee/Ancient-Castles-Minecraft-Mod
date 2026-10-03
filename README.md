@@ -8,11 +8,18 @@ the throne.
 
 Each castle is a raised hill with a moat around its foot and a bridge over it. A path climbs to the gatehouse. On top:
 
-- A square curtain wall with merlons and a wall walk, and a round tower at each corner.
-- A gatehouse: two towers, a portcullis, and banners.
-- The keep: a tall throne hall with a carpet runner, a dais, the throne, and the **Sealed Vault** set behind it.
-- Medium and large castles add barracks (bunks and an armory chest), a storehouse (supplies), and a well. Large
-  castles also have a wheat garden.
+- A square curtain wall with buttresses, an overhanging parapet, and a wall walk, and a round tower with arrow slits
+  at each corner.
+- A gatehouse: two towers flanking an arched gate with a portcullis, and banners.
+- The keep, two stories tall:
+  - The throne hall, with pillars, chandeliers, stained glass, banners, a gold-trimmed dais with carpeted steps, the
+    throne, and the **Sealed Vault** set behind it.
+  - Upstairs, a library with an enchanting table, the lord's bed, and a dining table.
+  - A lookout tower rising from the roof, flying the castle's flag.
+  - Underneath, a dungeon with prison cells, a mob spawner, and loot.
+- The courtyard grows with the castle's size: flower beds, a fountain, barracks, a storehouse, a blacksmith, market
+  stalls, tree gardens, and (in large castles) stables with horses and a wheat plot.
+- Torches and lanterns along the walls, towers, and path, and guards on the walls and at the gate.
 
 Sizes vary: small (about 21 blocks across the walls), medium (31), and large (43). The walls are weathered with mossy
 and cracked blocks, plus vines in leafy biomes.
@@ -31,6 +38,9 @@ and cracked blocks, plus vines in leafy biomes.
 | Dark forest, pale garden | Deepslate bricks, dark oak | The Dark Sorcerer (evoker) |
 | Savanna | Bricks, acacia | The Ashen Knight (wither skeleton) |
 | Cherry grove | Polished diorite, calcite, cherry | The Blossom Witch |
+
+Guards and the dungeon spawner match the theme too: vindicators and pillagers, strays in the snow, husks in the
+desert, bogged in the swamp, wither skeletons on the savanna, and so on.
 
 Lords have extra health, armor, and damage, and they show a boss health bar. When one dies, its vault turns into a
 treasure chest with diamonds, gold, emeralds, enchanted gear, golden apples, and more.
