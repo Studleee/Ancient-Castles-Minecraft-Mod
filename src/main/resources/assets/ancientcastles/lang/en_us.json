@@ -1,0 +1,17 @@
+{
+	"creativeTab.ancientcastles": "Ancient Castles",
+	"block.ancientcastles.sealed_vault": "Sealed Vault",
+	"boss.ancientcastles.warlord": "The Warlord",
+	"boss.ancientcastles.pillager_captain": "Pillager Captain",
+	"boss.ancientcastles.frost_lord": "The Frost Lord",
+	"boss.ancientcastles.husk_king": "The Husk King",
+	"boss.ancientcastles.bone_baron": "The Bone Baron",
+	"boss.ancientcastles.jungle_tyrant": "The Jungle Tyrant",
+	"boss.ancientcastles.bog_king": "The Bog King",
+	"boss.ancientcastles.dark_sorcerer": "The Dark Sorcerer",
+	"boss.ancientcastles.ashen_knight": "The Ashen Knight",
+	"boss.ancientcastles.blossom_witch": "The Blossom Witch",
+	"message.ancientcastles.sealed": "Sealed. Defeat this castle's lord to open it.",
+	"message.ancientcastles.awakens": "%s awakens!",
+	"message.ancientcastles.unsealed": "The vault is unsealed!"
+}

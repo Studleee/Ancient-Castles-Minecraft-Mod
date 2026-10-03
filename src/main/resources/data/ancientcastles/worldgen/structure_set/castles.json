@@ -1,0 +1,11 @@
+{
+	"placement": {
+		"type": "minecraft:random_spread",
+		"salt": 20261003,
+		"spacing": 40,
+		"separation": 16
+	},
+	"structures": [
+		{ "structure": "ancientcastles:castle", "weight": 1 }
+	]
+}

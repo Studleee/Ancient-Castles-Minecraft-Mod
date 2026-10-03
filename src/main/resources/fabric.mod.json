@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "ancientcastles",
+	"version": "${version}",
+	"name": "Ancient Castles",
+	"description": "Rare, weathered castles on hills ringed by moats, built to match their biome. Walk into the throne room to wake the castle's lord; defeat it to unseal the treasure vault.",
+	"authors": [
+		"Jacob"
+	],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/ancientcastles/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ancientcastles.AncientCastles"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

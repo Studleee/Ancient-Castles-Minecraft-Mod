@@ -1,0 +1,7 @@
+{
+	"type": "ancientcastles:castle",
+	"biomes": "#ancientcastles:has_structure/castle",
+	"step": "surface_structures",
+	"spawn_overrides": {},
+	"terrain_adaptation": "none"
+}
