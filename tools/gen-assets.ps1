@@ -162,6 +162,16 @@ Write-Loot 'castle_armory' @(
 		(Entry 'chainmail_chestplate' 4), (Entry 'diamond_sword' 2 0 0 (Levels 5 15)))),
 	(Pool 1 1 @((Entry 'iron_ingot' 1 2 6)))
 )
+Write-Loot 'castle_dungeon' @(
+	(Pool 3 6 @(
+		(Entry 'bone' 15 2 8), (Entry 'rotten_flesh' 12 2 8), (Entry 'string' 10 2 6), (Entry 'gunpowder' 8 1 4),
+		(Entry 'iron_ingot' 10 1 4), (Entry 'gold_ingot' 8 1 4), (Entry 'redstone' 6 2 8), (Entry 'lapis_lazuli' 6 2 8),
+		(Entry 'diamond' 3 1 2), (Entry 'emerald' 4 1 3), (Entry 'iron_bars' 4 2 6))),
+	(Pool 1 2 @(
+		(Entry 'book' 6 0 0 $randomEnchant), (Entry 'golden_apple' 4), (Entry 'saddle' 4), (Entry 'iron_horse_armor' 4),
+		(Entry 'golden_horse_armor' 3), (Entry 'name_tag' 3), (Entry 'music_disc_13' 2), (Entry 'music_disc_cat' 2),
+		(Entry 'experience_bottle' 4 2 6)))
+)
 Write-Loot 'castle_treasure' @(
 	(Pool 4 7 @(
 		(Entry 'diamond' 10 2 6), (Entry 'gold_ingot' 12 4 12), (Entry 'emerald' 10 3 10), (Entry 'golden_apple' 10 1 3),

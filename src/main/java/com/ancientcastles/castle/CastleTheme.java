@@ -3,13 +3,19 @@ package com.ancientcastles.castle;
 import java.util.Locale;
 import java.util.Set;
 
+import org.jspecify.annotations.Nullable;
+
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.block.AbstractBannerBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -140,6 +146,69 @@ public enum CastleTheme implements StringRepresentable {
 			return TAIGA;
 		}
 		return PLAINS;
+	}
+
+	/** Leaves for the courtyard trees, or null where it's too dry for trees. */
+	public @Nullable Block leaves() {
+		return switch (this) {
+			case PLAINS -> Blocks.OAK_LEAVES;
+			case TAIGA, SNOWY -> Blocks.SPRUCE_LEAVES;
+			case DESERT, BADLANDS -> null;
+			case JUNGLE -> Blocks.JUNGLE_LEAVES;
+			case SWAMP -> Blocks.MANGROVE_LEAVES;
+			case DARK_FOREST -> Blocks.DARK_OAK_LEAVES;
+			case SAVANNA -> Blocks.ACACIA_LEAVES;
+			case CHERRY -> Blocks.CHERRY_LEAVES;
+		};
+	}
+
+	/** True where gardens are sand with cacti and dead bushes instead of grass and flowers. */
+	public boolean dry() {
+		return this == DESERT || this == BADLANDS;
+	}
+
+	public Block gardenSoil() {
+		return switch (this) {
+			case DESERT -> Blocks.SAND;
+			case BADLANDS -> Blocks.RED_SAND;
+			default -> Blocks.GRASS_BLOCK;
+		};
+	}
+
+	public Block wallTorch() {
+		return lantern == Blocks.SOUL_LANTERN ? Blocks.SOUL_WALL_TORCH : Blocks.WALL_TORCH;
+	}
+
+	/** A standing banner in the castle's colors, flown from the top of the keep. */
+	public Block flag() {
+		return Blocks.BANNER.pick(((AbstractBannerBlock) banner).getColor());
+	}
+
+	/** Who keeps watch on the walls. */
+	public EntityType<? extends Mob> guard() {
+		return switch (this) {
+			case PLAINS, DARK_FOREST -> EntityTypes.VINDICATOR;
+			case TAIGA, CHERRY -> EntityTypes.PILLAGER;
+			case SNOWY -> EntityTypes.STRAY;
+			case DESERT -> EntityTypes.HUSK;
+			case BADLANDS -> EntityTypes.SKELETON;
+			case JUNGLE -> EntityTypes.ZOMBIE;
+			case SWAMP -> EntityTypes.BOGGED;
+			case SAVANNA -> EntityTypes.WITHER_SKELETON;
+		};
+	}
+
+	/** What the spawner in the dungeon makes. */
+	public EntityType<?> dungeonMob() {
+		return switch (this) {
+			case PLAINS, SAVANNA -> EntityTypes.ZOMBIE;
+			case TAIGA, BADLANDS, CHERRY -> EntityTypes.SKELETON;
+			case SNOWY -> EntityTypes.STRAY;
+			case DESERT -> EntityTypes.HUSK;
+			case JUNGLE -> EntityTypes.CAVE_SPIDER;
+			case SWAMP -> EntityTypes.BOGGED;
+			case DARK_FOREST -> EntityTypes.SPIDER;
+		};
 	}
 
 	public static CastleTheme byName(String name) {
